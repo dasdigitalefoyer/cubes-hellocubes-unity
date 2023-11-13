@@ -14,6 +14,7 @@ public class HelloCubesKeyboardController : KeyboardController
     public HelloCubesEventDispatcher helloCubesEventDispatcher;
     public HelloCubesAppController appController;
 
+
     protected override void Initialize()
     {
         base.Initialize();
