@@ -1,12 +1,13 @@
 {
   "dependencies": {
     "com.mirevi.pc-unity-base": {
-      "version": "file:d:/papo1437/Documents/projekte/mirevi/PuzzleCubes/packages/puzzleCubeUnityBase",
+      "version": "https://gogs.webtec.medien.hs-duesseldorf.de/puzzleCubes.base/pc-unity-base.git#develop",
       "depth": 0,
-      "source": "local",
+      "source": "git",
       "dependencies": {
         "com.unity.textmeshpro": "3.0.6"
-      }
+      },
+      "hash": "743e81bef9faf2f85fbdaa2308ba82667f51a14d"
     },
     "com.unity.collab-proxy": {
       "version": "1.17.7",
