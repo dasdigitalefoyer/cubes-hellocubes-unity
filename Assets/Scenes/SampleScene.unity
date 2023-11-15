@@ -375,9 +375,45 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2048331096, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: jsonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1081494637}
+    - target: {fileID: 2048331096, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: jsonEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleJsonEvent
+      objectReference: {fileID: 0}
     - target: {fileID: 2048331097, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
       propertyPath: host
       value: 192.168.111.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048331097, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: connectedEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048331097, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: connectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048331097, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: connectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1541298767}
+    - target: {fileID: 2048331097, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: connectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048331097, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: connectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: HandleMqttConnected
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048331097, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: connectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PuzzleCubes.Controller.AppController, Unity.com.mirevi.pc-unity-base
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048331097, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
+      propertyPath: connectedEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 523420240045937840, guid: 1d2a232409eb7194aaad11a71d483580, type: 3}
       propertyPath: m_RootOrder
