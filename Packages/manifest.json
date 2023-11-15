@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.mirevi.pc-unity-base": "https://gogs.webtec.medien.hs-duesseldorf.de/puzzleCubes.base/pc-unity-base.git#develop",
+    "com.mirevi.pc-unity-base": "file:d:/papo1437/Documents/projekte/mirevi/PuzzleCubes/packages/puzzleCubeUnityBase",
     "com.unity.collab-proxy": "1.17.7",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.16",
