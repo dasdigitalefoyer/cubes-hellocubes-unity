@@ -8,6 +8,6 @@ public class WorldOrientationHandler : MonoBehaviour
     public void HandleOrienatiton(float orientation)
     {
         
-        this.transform.rotation = Quaternion.Euler(0.0f, - orientation, 0.0f);
+        this.transform.rotation = Quaternion.Euler(0.0f, + orientation, 0.0f);
     }
 }
