@@ -39,6 +39,12 @@ public class HelloCubesAppController : AppController
             
         } 
 
+        // deactivate spash screen
+        if(cubeControl.Moving == true)
+        {
+            ShowSplashScreen(false);
+        }   
+
 
     }
 
