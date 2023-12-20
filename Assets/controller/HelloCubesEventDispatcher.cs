@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using MQTTnet;
 using Newtonsoft.Json;
 using PuzzleCubes.Communication;
+using PuzzleCubes.Controller;
 using UnityEngine;
 
 public class HelloCubesEventDispatcher : EventDispatcher
 {
    public HelloCubesEvent helloCubesEvent;
 
-   public const string helloCubesTopic =  "puzzleCubes/helloCubes";
+   public const string helloCubesRequestTopic =  "puzzleCubes/app/helloCubes";                          // from server 
+   public string helloCubesResponseTopic(string cubeId) =>  $"puzzleCubes/{cubeId}/app/helloCubes";                 // to server
 
     
 
@@ -17,15 +19,10 @@ public class HelloCubesEventDispatcher : EventDispatcher
     {
         base.Initialize();
 
-        // SAMPLE EVENT DISPATCHER - BEGIN
-
-        // FOR JSON MESSAGE
-        //jsonTypeToEventMap.Add(typeof(HelloCubes), (x, o) => (x as HelloCubesEventDispatcher).helloCubesEvent.Invoke(o as HelloCubes));
-
-        // SAMPLE EVENT DISPATCHER - END
+      
 
 
-        subscriptions.Add(new MqttTopicFilterBuilder().WithTopic(helloCubesTopic).Build() ,HandleHelloCubes);
+        subscriptions.Add(new MqttTopicFilterBuilder().WithTopic(helloCubesRequestTopic).Build() ,HandleHelloCubes);
     }
 
     // SAMPLE HANDLER FOR MQTT MESSAGE
@@ -46,7 +43,7 @@ public class HelloCubesEventDispatcher : EventDispatcher
         });
         // this.SendZmq(json, true);  
         var msg = new MqttApplicationMessage();
-        msg.Topic = helloCubesTopic;
+        msg.Topic = helloCubesResponseTopic(AppController.Instance.state.CubeId);
         msg.Payload = System.Text.Encoding.UTF8.GetBytes(json);
         msg.MessageExpiryInterval = 3600;
         msg.Retain = true;
