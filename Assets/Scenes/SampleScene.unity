@@ -852,7 +852,7 @@ MonoBehaviour:
     appName: hello-cubes
     appVersion: 0.1
     processId: 0
-    cubeId: cube06
+    cubeId: 
     isRunning: 0
     volume: 0
     mqttConnected: 0
