@@ -1,9 +1,8 @@
-# Tutorial-App: HelloCubes
+# HelloCubes - DemoApp for the cubes project
 
-A simple tutorial app named HelloCubes is available with some examples of event handling:
+A simple tutorial app named HelloCubes is available with some examples of event handling (internal from cube backend if running or mocked by keyboard)
 
-### Unity-App
-
+## Description
 This app handles the orientation Event from CubeControl events sent by the backend. Additionally it receives MQTT-messages on *puzzlecubes/app/helloCubes* and responds to it on an own topic  *puzzlecubes/<CUBE_ID>/app/helloCubes*.
 
 Move the cube (or press the right keys) to deactivate the spashscreen.
@@ -19,3 +18,26 @@ It also listens to *CubeControl*\-Events with its *HandleCubeControl*\-method (a
 When the orientation differs more than 10 degrees from orientation stored in *appState* the state is set dirty so it gets sent out by MQTT. The *appState* is initialized in the initialize-function.
 
 **HelloCubesKeyboardController:** The keyboard control script inherits from base *KeyboardController* and just introduces sending HelloCubes messages by Space-Bar.
+
+## Getting started
+
+we used Unity 2021.3 for devloping, neweer versions could require some modifications.
+
+### Corresponding gamemaster app
+[https://github.com/dasdigitalefoyer/cubes-hellocubes-web]
+
+Follow the steps to getting the gamemaster app started together with a MQTT broker
+
+### Setup
+* open SampleScene
+* Change the MQTT settings according to your infrastructure. The settings can be found in the scene under Controller->Communication.MQTTcommunication
+
+### Run
+* press space for sending out HelloCubes
+* press E/Q/Y for mock MOVING event to get rid of the splash screen
+* use LEFT/RIGHT arrows for rotating the world (simulates cube  orientation)
+* press SPACE for sending out a Hello message to MQTT
+
+
+### Use Backend
+If the sensor hardware is accessible you can run the cube backend (https://github.com/dasdigitalefoyer/cubes-cube-backend) on your system to interact with the sensors and generate the events.

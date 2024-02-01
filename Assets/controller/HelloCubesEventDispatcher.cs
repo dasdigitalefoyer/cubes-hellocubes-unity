@@ -46,7 +46,7 @@ public class HelloCubesEventDispatcher : EventDispatcher
         msg.Topic = helloCubesResponseTopic(AppController.Instance.state.CubeId);
         msg.Payload = System.Text.Encoding.UTF8.GetBytes(json);
         msg.MessageExpiryInterval = 3600;
-        msg.Retain = true;
+        
         
         this.mqttCommunication.Send(msg); 
         
